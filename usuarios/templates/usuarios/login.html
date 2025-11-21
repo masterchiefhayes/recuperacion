@@ -1,0 +1,29 @@
+{% extends 'usuarios/base.html' %}
+
+{% block title %}Login{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-4">
+        <h2 class="text-center mb-4">Login</h2>
+
+        <form method="post" class="bg-light p-4 rounded shadow">
+            {% csrf_token %}
+            <div class="mb-3">
+                <label class="form-label"><strong>Usuario:</strong></label>
+                <input type="text" name="username" class="form-control" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label"><strong>Contraseña:</strong></label>
+                <input type="password" name="password" class="form-control" required>
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Ingresar</button>
+        </form>
+
+        <!-- Mensaje fijo abajo -->
+        <p class="text-center mt-3 text-muted">
+            Es necesario iniciar sesión para ver el contenido de las páginas.
+        </p>
+    </div>
+</div>
+{% endblock %}
