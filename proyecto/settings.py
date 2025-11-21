@@ -25,7 +25,8 @@ SECRET_KEY = 'django-insecure-03vna%%#akw#ib!!rqz#hpdc=u97ipd8i%18t@z00+r10osf&h
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+# Agregado para permitir el host de Render
+ALLOWED_HOSTS = ['recuperacion-3m9l.onrender.com']
 
 
 # Application definition
@@ -122,5 +123,5 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-# ←----------------- Agregado para login correcto
+# Agregado para login correcto
 LOGIN_URL = 'login'
